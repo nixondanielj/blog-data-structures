@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace BlogDataStructures
 {
-    public class MyDirectAccessList : IList<int>
+    public class MyDirectAccessList<T> : IList<T>
     {
-        private int[] _arr;
+        private T[] _arr;
         private int nextIdx = 0;
         private const int INITIAL_SIZE = 50;
         private const int SIZE_MULTIPLIER = 2;
 
-        public int this[int index]
+        public T this[int index]
         {
             get
             {
@@ -40,11 +40,11 @@ namespace BlogDataStructures
             }
         }
 
-        public void Add(int item)
+        public void Add(T item)
         {
             if(_arr == null)
             {
-                _arr = new int[INITIAL_SIZE];
+                _arr = new T[INITIAL_SIZE];
             }
             else if(nextIdx >= _arr.Length)
             {
@@ -59,32 +59,32 @@ namespace BlogDataStructures
             throw new NotImplementedException();
         }
 
-        public bool Contains(int item)
+        public bool Contains(T item)
         {
             throw new NotImplementedException();
         }
 
-        public void CopyTo(int[] array, int arrayIndex)
+        public void CopyTo(T[] array, int arrayIndex)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
         }
 
-        public int IndexOf(int item)
+        public int IndexOf(T item)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(int index, int item)
+        public void Insert(int index, T item)
         {
             throw new NotImplementedException();
         }
 
-        public bool Remove(int item)
+        public bool Remove(T item)
         {
             throw new NotImplementedException();
         }
